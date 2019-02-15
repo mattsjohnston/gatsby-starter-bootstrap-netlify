@@ -59,7 +59,7 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "src/pages/home.yml"
+        file: "src/pages/home.md"
         fields:
           - { label: Hero, name: hero, widget: markdown }
           - label: Company
