@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
-export default function Template ({ data }) {
+export default function Template({ data }) {
   const { markdownRemark: post } = data
   return (
     <Layout>
@@ -19,8 +19,8 @@ export default function Template ({ data }) {
   )
 }
 
-export const aboutPageQuery = graphql`
-  query AboutPage($path: String!) {
+export const homePageQuery = graphql`
+  query HomePage($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
