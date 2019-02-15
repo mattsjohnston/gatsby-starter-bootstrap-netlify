@@ -18,12 +18,6 @@ collections:
           label: "Content Type",
           name: "contentType",
           widget: "hidden",
-          default: "home",
-        }
-      - {
-          label: "Content Type",
-          name: "contentType",
-          widget: "hidden",
           default: "blog",
         }
       - { label: "Path", name: "path", widget: "string", default: "title" }
@@ -61,6 +55,12 @@ collections:
         name: "home"
         file: "src/pages/home.md"
         fields:
+          - {
+              label: "Content Type",
+              name: "contentType",
+              widget: "hidden",
+              default: "home",
+            }
           - { label: Hero, name: hero, widget: markdown }
           - label: Company
             name: company
