@@ -48,19 +48,33 @@ collections:
               },
             ],
         }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "src/pages/home.yml"
+        fields:
+          - { label: Hero, name: hero, widget: markdown }
+          - label: Company
+            name: company
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Summary, name: summary, widget: string }
+              - { label: Graphic, name: graphic, widget: image }
+          - label: Building
+            name: building
+            widget: object
+            fields:
+              - { label: Coming, name: coming, widget: string }
+              - { label: Location, name: location, widget: string }
+          - label: Our Story
+            name: our_story
+            widget: object
+            fields:
+              - { label: Subheading, name: subheading, widget: string }
+              - { label: Heading, name: heading, widget: string }
+              - { label: Content, name: content, widget: markdown }
+              - { label: Photos, name: photos, widget: list, fields: [{ label: Photo, name: photo, widget: image }] }
 
-  - name: "about"
-    label: "About"
-    folder: "src/pages/about"
-    create: false
-    slug: "{{slug}}"
-    fields:
-      - {
-          label: "Content Type",
-          name: "contentType",
-          widget: "hidden",
-          default: "about",
-        }
-      - { label: "Path", name: "path", widget: "hidden", default: "/about" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
