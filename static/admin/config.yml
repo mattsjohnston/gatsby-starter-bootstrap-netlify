@@ -8,12 +8,18 @@ media_folder: "/static/files/"
 public_folder: "/files/"
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - label: "Blog"
+    name: "blog"
     folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - {
+          label: "Content Type",
+          name: "contentType",
+          widget: "hidden",
+          default: "home",
+        }
       - {
           label: "Content Type",
           name: "contentType",
