@@ -21,7 +21,7 @@ collections:
               widget: "hidden",
               default: "home",
             }
-          - { label: "Path", name: "path", widget: "hidden", default: "/home" }
+          - { label: "Path", name: "path", widget: "hidden", default: "/" }
           - { label: Hero, name: hero, widget: markdown }
           - label: Company
             name: company

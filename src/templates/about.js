@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { Container } from 'reactstrap'
 import Helmet from 'react-helmet'
@@ -9,11 +10,7 @@ export default function Template ({ data }) {
   return (
     <Layout>
       <div>
-        <Helmet title={`${post.frontmatter.title} | ${data.site.siteMetadata.title}`} />
-        <Container>
-          <h1 className='display-3'>{post.frontmatter.title}</h1>
-        </Container>
-        <Container dangerouslySetInnerHTML={{ __html: post.html }} />
+        test
       </div>
     </Layout>
   )

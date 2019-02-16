@@ -1,24 +1,22 @@
 import React from 'react'
-import { Container, Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap'
-import Link from 'gatsby-link'
+import { Container } from 'reactstrap'
+import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
+  console.log(data);
+
+  const { markdownRemark: post } = data
   return (
     <Layout>
-      <Container>
-        {posts.map(({ node: post }) => (
-          <Card style={{marginBottom: 10}} key={post.id}>
-            <CardBody>
-              <CardTitle><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
-              <CardSubtitle style={{marginBottom: 10}}>{post.frontmatter.date}</CardSubtitle>
-              <CardText>{post.excerpt}</CardText>
-            </CardBody>
-          </Card>
-        ))}
-      </Container>
+      <div>
+        <Helmet title={`${post.frontmatter.title} | ${data.site.siteMetadata.title}`} />
+        <Container>
+          <h1 className='display-3'>{post.frontmatter.title}</h1>
+        </Container>
+        <Container dangerouslySetInnerHTML={{ __html: post.html }} />
+      </div>
     </Layout>
   )
 }
