@@ -43,7 +43,10 @@ collections:
               - { label: Subheading, name: subheading, widget: string }
               - { label: Heading, name: heading, widget: string }
               - { label: Content, name: content, widget: markdown }
-              - { label: Photos, name: photos, widget: object, fields: 
+              - label: Photos
+                name: photos
+                widget: object
+                fields: 
                   - { label: Photo 1, name: photo_1, widget: image }
                   - { label: Photo 2, name: photo_2, widget: image }
                   - { label: Photo 3, name: photo_3, widget: image }
@@ -51,5 +54,3 @@ collections:
                   - { label: Photo 5, name: photo_5, widget: image }
                   - { label: Photo 6, name: photo_6, widget: image }
                   - { label: Photo 7, name: photo_7, widget: image }
-                }
-
