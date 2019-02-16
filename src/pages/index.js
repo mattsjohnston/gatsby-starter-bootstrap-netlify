@@ -29,7 +29,30 @@ export const pageQuery = graphql`
       html
       frontmatter {
         path
-        title
+        hero
+        companies {
+          name
+          summary
+          graphic
+        }
+        building {
+          coming
+          location
+        }
+        our_story {
+          subheading
+          heading
+          content
+          photos {
+            photo_1
+            photo_2
+            photo_3
+            photo_4
+            photo_5
+            photo_6
+            photo_7
+          }
+        }
       }
     }
     site {

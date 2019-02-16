@@ -15,16 +15,10 @@ collections:
         name: "home"
         file: "src/pages/_content/home.md"
         fields:
-          - {
-              label: "Content Type",
-              name: "contentType",
-              widget: "hidden",
-              default: "home",
-            }
           - { label: "Path", name: "path", widget: "hidden", default: "/" }
           - { label: Hero, name: hero, widget: markdown }
-          - label: Company
-            name: company
+          - label: Companies
+            name: companies
             widget: list
             fields:
               - { label: Name, name: name, widget: string }

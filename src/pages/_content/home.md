@@ -5,7 +5,7 @@ hero: |-
   **Built for Community**
 
   # **Finding new opportunities for meaningful community.**
-company:
+companies:
   - graphic: /files/stoble-coffee-roasters-illustration-2x.png
     name: Stoble Coffee Roasters
     summary: >-
