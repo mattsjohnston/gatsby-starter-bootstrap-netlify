@@ -36,7 +36,7 @@ our_story:
     eget porttitor magna, a lobortis mi. Suspendisse congue consequat quam, a
     facilisis velit. In rutrum malesuada purus quis varius.
   heading: From friends to to neighbors to business partners.
-  photos: []
+  photos: {}
   subheading: Our Story
 ---
 
