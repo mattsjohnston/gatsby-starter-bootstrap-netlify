@@ -1,5 +1,4 @@
 ---
-contentType: home
 title: Stoble | Better Together
 path: /
 hero: |-
@@ -19,6 +18,7 @@ companies:
 building:
   coming: Coming Early 2020
   location: 'Downtown Chico, California'
+  photo: /files/chico_1-photo.jpg
 our_story:
   content: >-
     Vestibulum interdum lacus ac sem aliquam, nec sollicitudin turpis maximus.
