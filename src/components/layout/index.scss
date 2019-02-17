@@ -1,9 +1,6 @@
 // Bootstrap setup
 @import "bootstrap/scss/functions";
 
-// Front setup
-@import 'front/variables';
-
 // Custom setup
 @import 'user-variables';
 
@@ -42,26 +39,44 @@
 // @import "bootstrap/scss/carousel";
 @import "bootstrap/scss/utilities";
 
-// @import 'front/front';
+.hero {
+  text-align: center;
+  padding: 211px 30%;
 
-// page-level layout
+  > h2 {
+    color: $light-green-text;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+  > h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: $primary;
+    line-height: 46px;
+  }
+}
 
-// .App {
-//   display: flex;
-//   flex-direction: column;
-//   height: 100vh;
+.companies {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
 
-//   & > .pageContent {
-//     flex: 1;
-//     overflow: auto;
-//     padding-top: 10px;
-//   }
-// }
-
-// .navbar-nav {
-//   flex-direction: row!important;
-
-//   & > * {
-//     padding-left: 10px; 
-//   }
-// }
+  .company {
+    padding: 0 48px 48px;
+    img {
+      max-width: 408px;
+      margin: 0 auto 48px;
+    }
+    h3 {
+      font-size: 18px;
+      color: $primary;
+      font-weight: 500;
+    }
+    p {
+      font-size: 14px;
+      line-height: 23px;
+      color: #8B9193;
+    }
+  }
+}

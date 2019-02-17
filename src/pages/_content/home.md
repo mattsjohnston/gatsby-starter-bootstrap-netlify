@@ -1,10 +1,10 @@
 ---
 contentType: home
+title: Stoble | Better Together
 path: /
 hero: |-
-  **Built for Community**
-
-  # **Finding new opportunities for meaningful community.**
+  ## Built for Community
+  # Finding new opportunities for meaningful community.
 companies:
   - graphic: /files/stoble-coffee-roasters-illustration-2x.png
     name: Stoble Coffee Roasters

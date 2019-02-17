@@ -1,20 +1,18 @@
 // user-variables.scss
-// Use this to overwrite Bootstrap and Front variables
+// Use this to overwrite Bootstrap variables
 //
 
+$container-max-widths: (
+  xl: 1110px
+);
 
-// Example of a variable override to change Front's primary color and font size
-// Remove the "//" to comment it in and see it in action!
-// $primary: $red;
-// $font-size-base: .875rem;
+$primary: #004157;
+$light-bg-color: #F4F7F8;
+$light-green-text: #669898;
 
-// Front's primary color has lighter as well as darker color versions,
-// and they also need to be changed upon changing the primary color to a different hex code - otherwise the color of some blocks might look not professional.
-// Here is a list of colors that associate these changes:
-// $primary-darker:                                              $red;
-// $primary-lighter:                                             $red-lighter;
-// $info:                                                        $red-lighter;
+$font-family-sans-serif: "Poppins", Helvetica, Arial, sans-serif !default;
 
+$border-radius: 16px;
 
-// The color of the SVG loader should be modified manually.
-// See assets/svg/preloaders/circle-preloader.svg
+$card-border-width:                 0;
+$card-bg:                           $light-bg-color;

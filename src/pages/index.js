@@ -1,21 +1,41 @@
+// @ts-nocheck
 import React from 'react'
 import { Container } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
+import remark from 'remark';
+import remarkHtml from 'remark-html';
 import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => {
-  console.log(data);
-
   const { markdownRemark: post } = data
+  const hero = remark()
+    .use(remarkHtml)
+    .processSync(post.frontmatter.hero)
+    .toString();
+    
   return (
     <Layout>
       <div>
-        <Helmet title={`${post.frontmatter.title} | ${data.site.siteMetadata.title}`} />
+        <Helmet title={post.frontmatter.title} />
         <Container>
-          <h1 className='display-3'>{post.frontmatter.title}</h1>
+          
+          <div className="hero card" dangerouslySetInnerHTML={{ __html: hero }}></div>
+          <ul className="companies row">
+            {post.frontmatter.companies.map(function (company, index) {
+              return (
+                <li className="col-sm">
+                  <div className="company card">
+                    <img src={company.graphic} alt={company.name} />
+                    <h3>{company.name}</h3>
+                    <p>{company.summary}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+
         </Container>
-        <Container dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
   )
@@ -28,6 +48,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
+        title
         path
         hero
         companies {

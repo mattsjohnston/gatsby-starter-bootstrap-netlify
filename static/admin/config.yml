@@ -15,6 +15,7 @@ collections:
         name: "home"
         file: "src/pages/_content/home.md"
         fields:
+          - { label: "Title", name: "title", widget: "string" }
           - { label: "Path", name: "path", widget: "hidden", default: "/" }
           - { label: Hero, name: hero, widget: markdown }
           - label: Companies
@@ -30,6 +31,7 @@ collections:
             fields:
               - { label: Coming, name: coming, widget: string }
               - { label: Location, name: location, widget: string }
+              - { label: Photo, name: photo, widget: image }
           - label: Our Story
             name: our_story
             widget: object
