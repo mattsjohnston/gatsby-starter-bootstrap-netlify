@@ -39,21 +39,29 @@
 // @import "bootstrap/scss/carousel";
 @import "bootstrap/scss/utilities";
 
+h4 {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #767676;
+}
+
 .hero {
   text-align: center;
-  padding: 211px 30%;
+  padding: 20% 24px;
 
-  > h2 {
+  > h4 {
     color: $light-green-text;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 0.1em;
   }
   > h1 {
     font-size: 28px;
     font-weight: 500;
     color: $primary;
     line-height: 46px;
+  }
+  @include media-breakpoint-up(sm) {
+    padding-left: 30%;
+    padding-right: 30%;
   }
 }
 
@@ -64,7 +72,9 @@
 
   .company {
     padding: 0 48px 48px;
+    margin-bottom: 24px;
     img {
+      width: 100%;
       max-width: 408px;
       margin: 0 auto 48px;
     }
@@ -77,6 +87,56 @@
       font-size: 14px;
       line-height: 23px;
       color: #8B9193;
+      margin-bottom: 0;
     }
   }
+}
+
+.building {
+  background-color: rgba(#000, .3);
+  background-size: cover;
+  text-align: center;
+  padding: 20% 24px;
+  border-radius: $border-radius;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: .3;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #fff;
+    position: relative;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: .8;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}
+
+.our-story {
+  margin-top: 160px;
+  text-align: center;
+}
+
+.slider {
+  height: 400px;
 }

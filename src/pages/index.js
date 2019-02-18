@@ -8,11 +8,17 @@ import remarkHtml from 'remark-html';
 import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => {
-  const { markdownRemark: post } = data
-  const hero = remark()
-    .use(remarkHtml)
-    .processSync(post.frontmatter.hero)
-    .toString();
+  const { markdownRemark: post } = data,
+    hero = remark()
+      .use(remarkHtml)
+      .processSync(post.frontmatter.hero)
+      .toString(),
+    about_content = remark()
+      .use(remarkHtml)
+      .processSync(post.frontmatter.our_story.content)
+      .toString();
+
+  console.log(post.frontmatter);
     
   return (
     <Layout>
@@ -21,6 +27,7 @@ const IndexPage = ({ data }) => {
         <Container>
           
           <div className="hero card" dangerouslySetInnerHTML={{ __html: hero }}></div>
+
           <ul className="companies row">
             {post.frontmatter.companies.map(function (company, index) {
               return (
@@ -34,6 +41,29 @@ const IndexPage = ({ data }) => {
               );
             })}
           </ul>
+
+          <div className="building" style={{ backgroundImage: `url(${post.frontmatter.building.photo})`}}>
+            <h1>{post.frontmatter.building.coming}</h1>
+            <h4>{post.frontmatter.building.location}</h4>
+          </div>
+
+          <div className="row justify-content-center">
+            <main className="our-story col-12 col-md-9 col-lg-8">
+              <h4>{post.frontmatter.our_story.subheading}</h4>
+              <h1>{post.frontmatter.our_story.heading}</h1>
+              <div className="content" dangerouslySetInnerHTML={{ __html: about_content }}></div>
+              
+              <div className="gallery">
+                {post.frontmatter.our_story.photos.map(function(photo, index) {
+                  console.log(photo);
+                  return (
+                    <img src={photo} alt="Thiedes and Johnstons" />
+                  );
+                })}
+              </div>
+
+            </main>
+          </div>
 
         </Container>
       </div>
@@ -59,20 +89,13 @@ export const pageQuery = graphql`
         building {
           coming
           location
+          photo
         }
         our_story {
           subheading
           heading
           content
-          photos {
-            photo_1
-            photo_2
-            photo_3
-            photo_4
-            photo_5
-            photo_6
-            photo_7
-          }
+          photos
         }
       }
     }

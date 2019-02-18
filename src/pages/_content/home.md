@@ -2,7 +2,7 @@
 title: Stoble | Better Together
 path: /
 hero: |-
-  ## Built for Community
+  #### Built for Community
   # Finding new opportunities for meaningful community.
 companies:
   - graphic: /files/stoble-coffee-roasters-illustration-2x.png
@@ -37,13 +37,13 @@ our_story:
     facilisis velit. In rutrum malesuada purus quis varius.
   heading: From friends to to neighbors to business partners.
   photos:
-    photo_1: /files/img_20161231_102800.jpg
-    photo_2: /files/img_4100.jpg
-    photo_3: /files/mvimg_20181024_185541.jpg
-    photo_4: /files/img_20181031_165609.jpg
-    photo_5: /files/img_20180421_180628.jpg
-    photo_6: /files/img_20180413_191322.jpg
-    photo_7: /files/mvimg_20181008_143009.jpg
+    - /files/img_20161231_102800.jpg
+    - /files/img_4100.jpg
+    - /files/mvimg_20181024_185541.jpg
+    - /files/img_20181031_165609.jpg
+    - /files/img_20180421_180628.jpg
+    - /files/img_20180413_191322.jpg
+    - /files/mvimg_20181008_143009.jpg
   subheading: Our Story
 ---
 
