@@ -47,12 +47,15 @@ const IndexPage = ({ data }) => {
             <h4>{post.frontmatter.building.location}</h4>
           </div>
 
-          <div className="row justify-content-center">
-            <main className="our-story col-12 col-md-9 col-lg-8">
-              <h4>{post.frontmatter.our_story.subheading}</h4>
-              <h1>{post.frontmatter.our_story.heading}</h1>
-              <div className="content" dangerouslySetInnerHTML={{ __html: about_content }}></div>
-              
+
+          <main className="our-story">
+            <div className="row justify-content-center">
+              <div className="col-12 col-md-9 col-lg-8">
+                <h4>{post.frontmatter.our_story.subheading}</h4>
+                <h1>{post.frontmatter.our_story.heading}</h1>
+                <div className="content" dangerouslySetInnerHTML={{ __html: about_content }}></div>
+              </div>
+
               <div className="gallery">
                 {post.frontmatter.our_story.photos.map(function(photo, index) {
                   console.log(photo);
@@ -64,8 +67,8 @@ const IndexPage = ({ data }) => {
                 })}
               </div>
 
-            </main>
-          </div>
+            </div>
+          </main>
 
         </Container>
       </div>
