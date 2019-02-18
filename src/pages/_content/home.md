@@ -38,12 +38,8 @@ our_story:
   heading: From friends to to neighbors to business partners.
   photos:
     - /files/img_20161231_102800.jpg
-    - /files/img_4100.jpg
-    - /files/mvimg_20181024_185541.jpg
     - /files/img_20181031_165609.jpg
     - /files/img_20180421_180628.jpg
-    - /files/img_20180413_191322.jpg
-    - /files/mvimg_20181008_143009.jpg
   subheading: Our Story
 ---
 
