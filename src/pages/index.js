@@ -57,7 +57,9 @@ const IndexPage = ({ data }) => {
                 {post.frontmatter.our_story.photos.map(function(photo, index) {
                   console.log(photo);
                   return (
-                    <img src={photo} alt="Thiedes and Johnstons" />
+                    <figure className="gallery__item gallery__item">
+                      <img src={photo} class="gallery__img" alt="Thiedes and Johnstons" />
+                    </figure>
                   );
                 })}
               </div>
