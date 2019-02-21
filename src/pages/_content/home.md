@@ -20,23 +20,25 @@ building:
   location: 'Downtown Chico, California'
   photo: /files/chico_1-photo.jpg
 our_story:
-  subheading: Our Story
-  heading: From friends to to neighbors to business partners.
   content: >-
-    Vestibulum interdum lacus ac sem aliquam, nec sollicitudin turpis maximus.
-    Maecenas gravida nisl nec lectus mollis, et dignissim mi ultrices. Curabitur
-    eget pulvinar nunc, non euismod ipsum. Fusce sapien magna, accumsan vel mi
-    eget, mollis viverra sapien. Vestibulum fringilla molestie metus ut
-    tincidunt. Maecenas quis faucibus urna. Praesent suscipit enim sed erat
-    vehicula ornare. Aliquam erat volutpat.
+    It all started at Cal Poly in San Luis Obispo. The gals met in the dorms and
+    were roommates throughout college. The guys ended up as roommates a few
+    years later. We experienced growth, change, heart-ache, and … alongside of
+    one another throughout those years forming deep, authentic, and lasting
+    friendships. Community with one another became our heartbeat. We all got
+    married the summer of 2010 and then embarked upon adulthood in separate
+    parts of the world. 
 
 
-    Duis dolor tortor, venenatis eu diam ac, ullamcorper condimentum magna.
-    Curabitur lacus nunc, maximus sagittis aliquam ut, aliquam eget mi.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-    ac turpis egestas. Curabitur pellentesque lacus a ex porta ultricies. Mauris
-    eget porttitor magna, a lobortis mi. Suspendisse congue consequat quam, a
-    facilisis velit. In rutrum malesuada purus quis varius.
+    We stayed in touch, getting together often to reminisce, laugh, catch up,
+    and dream about the future together. Community remained our heartbeat. As we
+    dreamed about the future, we envisioned a life in which we could work
+    towards something we care about and live and raise our children alongside
+    one another, giving us an opportunity to pass along our love for community.
+    Eight years and four children later, we live across the street from each
+    other and are working to build a company that builds the type of community
+    we love so much.
+  heading: From friends to to neighbors to business partners.
   photos:
     - /files/img_20161231_102800.jpg
     - /files/img_4100.jpg
@@ -45,5 +47,6 @@ our_story:
     - /files/img_20180421_180628.jpg
     - /files/img_20180413_191322.jpg
     - /files/mvimg_20181008_143009.jpg
+  subheading: Our Story
 ---
 
