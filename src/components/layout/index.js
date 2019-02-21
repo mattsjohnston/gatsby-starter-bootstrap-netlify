@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import logo from './images/logo.svg'
+import logo from '../../images/logo.svg'
 
 // code syntax-highlighting theme
 // feel free to change it to another one
@@ -29,7 +29,7 @@ const TemplateWrapper = ({ children, data }) => {
                 <Link to='#' className='nav-link'>Stoble Workplace</Link>
               </li>
               <li className='nav-item'>
-                <Link to='#' className='btn btn-outline'>Contact Us</Link>
+                <Link to='#' className='btn btn-outline-secondary'>Contact Us</Link>
               </li>
             </ul>
           </Container>

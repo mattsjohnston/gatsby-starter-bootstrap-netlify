@@ -20,11 +20,20 @@ collections:
           - { label: Hero, name: hero, widget: markdown }
           - label: Companies
             name: companies
-            widget: list
+            widget: object
             fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Summary, name: summary, widget: string }
-              - { label: Graphic, name: graphic, widget: image }
+              - label: Stoble Coffee
+                name: stoble_coffee
+                widget: object
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Summary, name: summary, widget: string }
+              - label: Stoble Workplace
+                name: stoble_workplace
+                widget: object
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Summary, name: summary, widget: string }
           - label: Building
             name: building
             widget: object

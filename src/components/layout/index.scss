@@ -14,12 +14,12 @@
 @import "bootstrap/scss/code";
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/forms"; 
 @import "bootstrap/scss/buttons";
 // @import "bootstrap/scss/transitions";
 // @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/input-group";
+@import "bootstrap/scss/input-group";
 // @import "bootstrap/scss/custom-forms";
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
@@ -39,22 +39,32 @@
 // @import "bootstrap/scss/carousel";
 @import "bootstrap/scss/utilities";
 
+// @import "front/forms/form";
+
+@import "functions";
+
+body, html {
+  font-size: $font-size-base-px;
+}
+
 h4 {
   text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  letter-spacing: 0.2em;
   color: #767676;
+  margin-bottom: rem-calc(9px);
 }
 
 .hero {
   text-align: center;
   padding: 20% 24px;
+  background: $light-bg-color url(../../images/hero-shapes.svg) center / cover;
 
   > h4 {
     color: $light-green-text;
   }
   > h1 {
-    font-size: 28px;
+    font-size: rem-calc(26px);
     font-weight: 500;
     color: $primary;
     line-height: 46px;
@@ -70,24 +80,56 @@ h4 {
   padding: 0;
   margin-top: 24px;
 
+  $company-transition-time: 1s;
+
   .company {
     padding: 0 48px 48px;
     margin-bottom: 24px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition-property: all;
+    cursor: pointer;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: inset rgba($primary, 0) 0 0 0 1px;
+      transition: 1s linear all;
+      border-radius: $border-radius;
+      z-index: 2;
+      transform: translateZ(1px);
+    }
     img {
       width: 100%;
       max-width: 408px;
       margin: 0 auto 48px;
     }
+    h3, p {
+      transition: $company-transition-time cubic-bezier(0.165, 0.840, 0.440, 1.000) all;
+    }
     h3 {
-      font-size: 18px;
+      font-size: 17px;
       color: $primary;
       font-weight: 500;
     }
     p {
-      font-size: 14px;
+      font-size: 13px;
       line-height: 23px;
       color: #8B9193;
       margin-bottom: 0;
+    }
+    &:hover {
+      box-shadow: rgba($light-bg-color, 1) 0 30px 60px;
+      &:after {
+        box-shadow: inset rgba($primary, .3) 0 0 0 1px;
+      }
+      h3, p {
+        transform: translateZ(40px);
+      }
     }
   }
 }
@@ -114,7 +156,6 @@ h4 {
   }
 
   h1 {
-    font-size: 28px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .1em;
@@ -123,7 +164,7 @@ h4 {
   }
 
   h4 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     color: #fff;
     opacity: .8;
@@ -135,42 +176,166 @@ h4 {
 .our-story {
   margin-top: 160px;
   text-align: center;
+
+  h1 {
+    margin-bottom: 48px;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 2em;
+  }
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 10vw);
+  grid-gap: 8px;
+  margin: 48px 0 0;
 
   .gallery__item {
     margin: 0;
-    border-radius: $border-radius;
+    border-radius: $border-radius / 2;
     overflow: hidden;
 
-    &:nth-child(1) {
-      grid-column-start: 1;
-      grid-column-end: 5;
-      grid-row-start: 1;
-      grid-row-end: 7;
-    }
-    &:nth-child(2) {
-      grid-column-start: 5;
-      grid-column-end: 9;
-      grid-row-start: 1;
-      grid-row-end: 4;
-    }
-    &:nth-child(3) {
-      grid-column-start: 5;
-      grid-column-end: 9;
-      grid-row-start: 4;
-      grid-row-end: 7;
-    }
+      &:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 6;
+      }
+      &:nth-child(2) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      &:nth-child(3) {
+        display: none;
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+      &:nth-child(4) {
+        display: none;
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      &:nth-child(5) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 6;
+      }
+      &:nth-child(6) {
+        display: none;
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 6;
+      }
+      &:nth-child(7) {
+        display: none;
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 3;
+        grid-row-end: 6;
+      }
   }
 
   .gallery__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 5vw);
+    grid-gap: 16px;
+
+    .gallery__item {
+      border-radius: $border-radius;
+
+      &:nth-child(3) {
+        display: block;
+      }
+      &:nth-child(4) {
+        display: block;
+      }
+      &:nth-child(6) {
+        display: block;
+      }
+      &:nth-child(7) {
+        display: block;
+      }
+    }
+      
+  }
+}
+
+.bottom-logo {
+  display: block;
+  margin: rem-calc(92px) auto;
+}
+
+footer {
+  background: $primary url(../../images/footer-shapes.svg) center / cover;
+  padding: rem-calc(140px) 0;
+  color: rgba(#fff, .6);
+  text-align: center;
+  position: relative;
+
+  h4 {
+    color: $secondary;
+  }
+  h3 {
+    color: #fff;
+    font-size: rem-calc(25px);
+    margin-bottom: rem-calc(13px);
+  }
+
+  form {
+    margin: rem-calc(48px) 0;
+  }
+
+  .contact {
+    text-align: center;
+
+    .icon-links {
+      display: inline-block;
+      margin-right: 32px;
+
+      .icon {
+        height: 24px;
+        fill: #E3F8FF;
+        opacity: 0.6;
+        transition: .2s linear all;
+      }
+      &:hover .icon {
+        opacity: 1;
+      }
+    }
+
+    .pill-link {
+      color: rgba(#E3F8FF, .6);
+      transition: .2s linear all;
+      display: inline-block;
+      border-radius: 6px;
+      background: rgba(#fff, .05);
+      line-height: 18px;
+      padding: 3px 18px;
+      font-size: 14px;
+
+      &:hover {
+        background: rgba(#fff, .1);
+        color: rgba(#E3F8FF, 1);
+        text-decoration: none;
+      }
+    }
   }
 }

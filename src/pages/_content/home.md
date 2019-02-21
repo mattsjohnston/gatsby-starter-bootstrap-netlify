@@ -5,12 +5,12 @@ hero: |-
   #### Built for Community
   # Finding new opportunities for meaningful community.
 companies:
-  - graphic: /files/stoble-coffee-roasters-illustration-2x.png
+  stoble_coffee:
     name: Stoble Coffee Roasters
     summary: >-
       Carefully crafted, micro-roasted coffee made in the heart of Chico,
       California. Stop by our downtown cafe or order online.
-  - graphic: /files/stoble-workplace-illustration-2x.png
+  stoble_workplace:
     name: Stoble Workplace
     summary: >-
       More than an office, we’re building a community for you to belong while
@@ -20,6 +20,8 @@ building:
   location: 'Downtown Chico, California'
   photo: /files/chico_1-photo.jpg
 our_story:
+  subheading: Our Story
+  heading: From friends to to neighbors to business partners.
   content: >-
     Vestibulum interdum lacus ac sem aliquam, nec sollicitudin turpis maximus.
     Maecenas gravida nisl nec lectus mollis, et dignissim mi ultrices. Curabitur
@@ -35,7 +37,6 @@ our_story:
     ac turpis egestas. Curabitur pellentesque lacus a ex porta ultricies. Mauris
     eget porttitor magna, a lobortis mi. Suspendisse congue consequat quam, a
     facilisis velit. In rutrum malesuada purus quis varius.
-  heading: From friends to to neighbors to business partners.
   photos:
     - /files/img_20161231_102800.jpg
     - /files/img_4100.jpg
@@ -44,6 +45,5 @@ our_story:
     - /files/img_20180421_180628.jpg
     - /files/img_20180413_191322.jpg
     - /files/mvimg_20181008_143009.jpg
-  subheading: Our Story
 ---
 

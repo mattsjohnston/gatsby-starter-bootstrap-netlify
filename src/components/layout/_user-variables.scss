@@ -6,13 +6,64 @@ $container-max-widths: (
   xl: 1110px
 );
 
-$primary: #004157;
 $light-bg-color: #F4F7F8;
 $light-green-text: #669898;
 
 $font-family-sans-serif: "Poppins", Helvetica, Arial, sans-serif !default;
+$font-size-base-px: 15px;
+$h1-font-size: 2.5rem;
+
+$body-color: #4D4D4D;
+$headings-color: #000;
 
 $border-radius: 16px;
 
+$navbar-brand-padding-y:            20px;
+
 $card-border-width:                 0;
 $card-bg:                           $light-bg-color;
+
+
+
+// Typography
+// =========================================================
+
+$line-height-base:                  1.8;
+
+
+
+// Color System
+// =========================================================
+
+$primary:                           #004157;
+$secondary:                         #F0C466;
+
+
+
+// Borders
+// =========================================================
+
+$border-radius:                     .25rem !default;
+$border-radius-sm:                  .125rem !default;
+$border-radius-md:                  .5rem !default;
+$border-radius-pill:                6.1875rem !default;
+$border-radius-rounded:             50% !default;
+
+
+
+// Buttons
+// =========================================================
+
+$btn-font-weight:                   500;
+$btn-border-radius:                 3px;
+
+
+
+// Forms
+// =========================================================
+
+$input-border-width:                0;
+$input-btn-font-size-lg:            1rem;
+$input-placeholder-color:           #8F95A0;
+$input-padding-y-lg:                0.8rem;
+// $btn-padding-x-lg:                  ;
