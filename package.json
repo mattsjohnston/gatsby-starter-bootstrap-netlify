@@ -21,6 +21,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
+    "react-svg": "^7.2.7",
     "react-tilt": "^0.1.4",
     "reactstrap": "^6.4.0",
     "remark": "^10.0.1",

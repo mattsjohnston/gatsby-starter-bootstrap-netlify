@@ -6,8 +6,16 @@ import { graphql } from 'gatsby'
 import remark from 'remark';
 import remarkHtml from 'remark-html';
 import Tilt from 'react-tilt';
+// import ReactSVG from 'react-svg'
 import Layout from '../components/layout'
-import logo_s from '../images/logo_s.svg'
+
+import logo_s from          '../images/logo_s.svg'
+import workplace_fg from    '../images/workplace/fg.svg'
+import workplace_mg from    '../images/workplace/mg.svg'
+import workplace_bg from    '../images/workplace/bg.svg'
+import coffee_fg from       '../images/coffee/fg.svg'
+import coffee_mg from       '../images/coffee/mg.svg'
+import coffee_bg from       '../images/coffee/bg.svg'
 
 const IndexPage = ({ data }) => {
   const { markdownRemark: post } = data,
@@ -29,21 +37,31 @@ const IndexPage = ({ data }) => {
           <div className="hero card" dangerouslySetInnerHTML={{ __html: hero }}></div>
 
           <ul className="companies row">
-            {post.frontmatter.companies.map(function (company, index) {
-              return (
-                <li className="col-sm">
-                  <Tilt className="Tilt company card" options={{ scale: 1.01, max: 15, speed: 3000, transition: true, reverse: false, glare: true }}>
-                    <img src={company.graphic} alt={company.name} />
-                    <h3>{company.name}</h3>
-                    <p>{company.summary}</p>
-                  </Tilt>
-                </li>
-              );
-            })}
+            <li className="col-sm">
+              <Tilt className="Tilt company company-coffee card" options={{ scale: 1.01, max: 15, speed: 3000, transition: true, reverse: false, glare: true }}>
+                <div className="illustration">
+                  <img className="illustration-piece bg" src={coffee_bg} alt="Stoble Coffee" />
+                  <img className="illustration-piece mg" src={coffee_mg} alt="Stoble Coffee" />
+                  <img className="illustration-piece fg" src={coffee_fg} alt="Stoble Coffee" />
+                </div>                <h3>{post.frontmatter.companies.stoble_coffee.name}</h3>
+                <p>{post.frontmatter.companies.stoble_coffee.summary}</p>
+              </Tilt>
+            </li>
+            <li className="col-sm">
+              <Tilt className="Tilt company company-workplace card" options={{ scale: 1.01, max: 15, speed: 3000, transition: true, reverse: false, glare: true }}>
+                <div className="illustration">
+                  <img className="illustration-piece bg" src={workplace_bg} alt="Stoble Workplace" />
+                  <img className="illustration-piece mg" src={workplace_mg} alt="Stoble Workplace" />
+                  <img className="illustration-piece fg" src={workplace_fg} alt="Stoble Workplace" />
+                </div>
+                <h3>{post.frontmatter.companies.stoble_workplace.name}</h3>
+                <p>{post.frontmatter.companies.stoble_workplace.summary}</p>
+              </Tilt>
+            </li>
           </ul>
 
           <div className="building" style={{ backgroundImage: `url(${post.frontmatter.building.photo})`}}>
-            <h1>{post.frontmatter.building.coming}</h1>
+            <h2>{post.frontmatter.building.coming}</h2>
             <h4>{post.frontmatter.building.location}</h4>
           </div>
 
@@ -124,9 +142,14 @@ export const pageQuery = graphql`
         path
         hero
         companies {
-          name
-          summary
-          graphic
+          stoble_coffee {
+            name
+            summary
+          }
+          stoble_workplace {
+            name
+            summary
+          }
         }
         building {
           coming

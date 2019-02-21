@@ -56,6 +56,7 @@ $border-radius-rounded:             50% !default;
 
 $btn-font-weight:                   500;
 $btn-border-radius:                 3px;
+$btn-padding-x:                     1.5rem;
 
 
 
@@ -67,3 +68,11 @@ $input-btn-font-size-lg:            1rem;
 $input-placeholder-color:           #8F95A0;
 $input-padding-y-lg:                0.8rem;
 // $btn-padding-x-lg:                  ;
+
+
+// Navbar
+// =========================================================
+
+$navbar-light-color:                #485555;
+$navbar-light-hover-color:          $primary;
+$navbar-nav-link-padding-x:         1.6rem;
