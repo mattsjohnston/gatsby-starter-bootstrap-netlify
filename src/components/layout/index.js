@@ -22,14 +22,14 @@ const TemplateWrapper = ({ children, data }) => {
           <Container>
             <Link to='/' className='navbar-brand'><img src={logo} alt="Stoble - Better Together" /></Link>
             <ul className='nav navbar-nav'>
-              <li className='nav-item'>
+              <li className='nav-item nav-item-company'>
                 <Link to='#' className='nav-link'>Stoble Coffee</Link>
               </li>
-              <li className='nav-item'>
+              <li className='nav-item nav-item-company'>
                 <Link to='#' className='nav-link'>Stoble Workplace</Link>
               </li>
               <li className='nav-item'>
-                <Link to='#' className='btn btn-outline-secondary'>Contact Us</Link>
+                <a href='#contact' className='btn btn-outline-secondary'>Contact Us</a>
               </li>
             </ul>
           </Container>

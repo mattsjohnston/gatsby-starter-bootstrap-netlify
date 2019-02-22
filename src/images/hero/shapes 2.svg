@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="230px" height="371px" viewBox="0 0 230 371" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
-    <title>shapes 2</title>
+    <title>hero/shapes 2</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Fuller-Page-Copy-8" transform="translate(-180.000000, -265.000000)">
             <g id="Mission" transform="translate(180.000000, 97.000000)">
-                <g id="shapes" transform="translate(-365.000000, -392.000000)">
-                    <g id="shapes-2" transform="translate(116.000000, 510.275503)">
+                <g id="hero-shapes" transform="translate(-365.000000, -392.000000)">
+                    <g id="hero/shapes-2" transform="translate(116.000000, 510.275503)">
                         <path d="M205.709418,307.597193 C189.166371,258.962979 141.943154,245.558685 125.09457,196.026118 C104.772864,136.282756 136.932026,71.3318466 196.864831,51.0754391 C256.797782,30.8175827 321.954806,62.8757383 342.275495,122.617651 C359.125097,172.151667 330.072907,212.170388 346.361436,260.055492 C362.649966,307.942045 410.12741,322.094 426.977011,371.626567 C447.2977,431.370363 415.139265,496.320838 355.206314,516.57826 C295.273364,536.835681 230.11692,504.77825 209.795214,445.035034 C192.94663,395.502467 222.252465,356.231407 205.709418,307.597193 Z" id="Fill-1" fill="#F0C466" transform="translate(276.035578, 283.826775) scale(-1, 1) rotate(41.000000) translate(-276.035578, -283.826775) "></path>
                         <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" opacity="0.400000006" cx="418.33486" cy="299.057311" r="60.5"></circle>
                     </g>

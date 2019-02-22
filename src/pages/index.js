@@ -16,6 +16,9 @@ import workplace_bg from    '../images/workplace/bg.svg'
 import coffee_fg from       '../images/coffee/fg.svg'
 import coffee_mg from       '../images/coffee/mg.svg'
 import coffee_bg from       '../images/coffee/bg.svg'
+// import hero_shapes_1 from   '../images/hero/shapes 1.svg'
+// import hero_shapes_2 from   '../images/hero/shapes 2.svg'
+// import hero_shapes_3 from   '../images/hero/shapes 3.svg'
 
 const IndexPage = ({ data }) => {
   const { markdownRemark: post } = data,
@@ -90,7 +93,7 @@ const IndexPage = ({ data }) => {
 
         </Container>
 
-        <footer>
+        <footer id="contact">
           <Container>
               <div className="row justify-content-center">
                 <div className="col-12 col-md-6 col-lg-4">

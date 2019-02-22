@@ -44,7 +44,16 @@
 @import "functions";
 
 body, html {
-  font-size: $font-size-base-px;
+  font-size: 12px;
+  @include media-breakpoint-up(md) {
+    font-size: 15px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 h4 {
@@ -55,7 +64,7 @@ h4 {
   margin-bottom: rem-calc(9px);
 }
 h2 {
-  
+
 }
 
 .navbar-nav {
@@ -66,12 +75,20 @@ h2 {
     font-size: .875rem;
     line-height: 1.8rem;
   }
+  .nav-item-company {
+    display: none;
+    @include media-breakpoint-up(sm) { display: block; }
+  }
 }
 
 .hero {
   text-align: center;
-  padding: 20% 24px;
-  background: $light-bg-color url(../../images/hero-shapes.svg) center / cover;
+  padding: 25vh 24px;
+  background-color: $light-bg-color;
+  background-image: url("../../images/hero/shapes 1.svg"), url("../../images/hero/shapes 2.svg"), url("../../images/hero/shapes 3.svg");
+  background-position: right bottom, left bottom, left top;
+  background-repeat: no-repeat;
+  background-size: 45%, 30%, 90%;
 
   > h4 {
     color: $light-green-text;
@@ -80,11 +97,12 @@ h2 {
     font-size: rem-calc(26px);
     font-weight: 500;
     color: $primary;
-    line-height: 46px;
+    line-height: 1.8em;
   }
   @include media-breakpoint-up(sm) {
     padding-left: 30%;
     padding-right: 30%;
+    background-size: 30%, 21%, 40%;
   }
 }
 
@@ -131,12 +149,12 @@ h2 {
       margin-bottom: 0;
     }
     .illustration {
-      width: 100%;
-      max-width: 408px;
       margin: 0 auto 48px;
       position: relative;
 
       .illustration-piece   {
+        width: 100%;
+        max-width: 408px;
         transition: $company-transition-time cubic-bezier(0.165, 0.840, 0.440, 1.000) all;
         position: absolute;
         top: 0;
@@ -213,6 +231,7 @@ h2 {
   p {
     font-size: 17px;
     line-height: 2em;
+    margin-bottom: 2em;
   }
 }
 
