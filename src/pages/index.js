@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 import remark from 'remark';
 import remarkHtml from 'remark-html';
 import Tilt from 'react-tilt';
-// import ReactSVG from 'react-svg'
+import Img from "gatsby-image";
 import Layout from '../components/layout'
 
 import logo_s from          '../images/logo_s.svg'
@@ -30,6 +30,8 @@ const IndexPage = ({ data }) => {
       .use(remarkHtml)
       .processSync(post.frontmatter.our_story.content)
       .toString();
+
+  console.log(post.frontmatter.building.photo);
     
   return (
     <Layout>
@@ -63,7 +65,10 @@ const IndexPage = ({ data }) => {
             </li>
           </ul>
 
-          <div className="building" style={{ backgroundImage: `url(${post.frontmatter.building.photo})`}}>
+          <div className="building">
+            <div className="bg-photo">
+              <Img fluid={post.frontmatter.building.photo.childImageSharp.fluid} alt="Stoble - Downtown Chico, CA" />
+            </div>
             <h2>{post.frontmatter.building.coming}</h2>
             <h4>{post.frontmatter.building.location}</h4>
           </div>
@@ -82,7 +87,7 @@ const IndexPage = ({ data }) => {
               {post.frontmatter.our_story.photos.map(function(photo, index) {
                 return (
                   <figure className="gallery__item gallery__item">
-                    <img src={photo} className="gallery__img" alt="Thiedes and Johnstons" />
+                    <Img fluid={photo.childImageSharp.fluid} className="gallery__img" alt="Thiedes and Johnstons" />
                   </figure>
                 );
               })}
@@ -157,13 +162,27 @@ export const pageQuery = graphql`
         building {
           coming
           location
-          photo
+          photo {
+            childImageSharp{
+              fluid(maxWidth: 1080, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            },
+            publicURL
+          }          
         }
         our_story {
           subheading
           heading
           content
-          photos
+          photos {
+            childImageSharp{
+              fluid(maxWidth: 258, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            },
+            publicURL
+          }
         }
       }
     }

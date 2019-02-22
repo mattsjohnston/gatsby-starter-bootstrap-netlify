@@ -18,7 +18,7 @@ const TemplateWrapper = ({ children, data }) => {
     <StaticQuery query={pageQuery} render={data => (
       <div className='App'>
         <Helmet title={data.site.siteMetadata.title} />
-        <div className='navbar navbar-expand-lg navbar-light'>
+        <div className='navbar navbar-expand-md navbar-light'>
           <Container>
             <Link to='/' className='navbar-brand'><img src={logo} alt="Stoble - Better Together" /></Link>
             <ul className='nav navbar-nav'>

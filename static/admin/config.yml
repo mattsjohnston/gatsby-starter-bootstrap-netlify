@@ -4,8 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "/static/files/"
-public_folder: "/files/"
+media_folder: static/files
+public_folder: /files
 
 collections:
   - label: "Pages"
