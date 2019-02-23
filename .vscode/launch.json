@@ -11,11 +11,12 @@
             "protocol": "inspector",
             "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
             "args": [
-                "develop"
+                "develop",
+                "-H localhost"
             ],
             "stopOnEntry": false,
             "runtimeArgs": [
-                "--nolazy"
+                "--nolazy",
             ],
             "sourceMaps": false
         },
