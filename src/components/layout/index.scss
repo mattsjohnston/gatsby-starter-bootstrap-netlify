@@ -74,6 +74,7 @@ h2 {
   .nav-item .btn {
     font-size: .875rem;
     line-height: 1.8rem;
+    color: $secondary;
   }
   .nav-item-company {
     display: none;
@@ -114,68 +115,75 @@ h2 {
   $company-transition-time: 1s;
 
   .company {
-    padding: 0 48px 48px;
-    margin-bottom: 24px;
-    transform-style: preserve-3d;
-    position: relative;
-    transition-property: all;
-    cursor: pointer;
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      box-shadow: inset rgba($primary, 0) 0 0 0 1px;
-      transition: 1s linear all;
-      border-radius: $border-radius;
-      z-index: 2;
-      transform: translateZ(1px);
-    }
-    h3, p {
-      transition: $company-transition-time cubic-bezier(0.165, 0.840, 0.440, 1.000) all;
-    }
-    h3 {
-      font-size: 17px;
-      color: $primary;
-      font-weight: 500;
-    }
-    p {
-      font-size: 13px;
-      line-height: 23px;
-      color: #8B9193;
-      margin-bottom: 0;
-    }
-    .illustration {
-      margin: 0 auto 48px;
-      position: relative;
+    display: block;
+    text-decoration: none;
 
-      .illustration-piece   {
-        width: 100%;
-        max-width: 408px;
-        transition: $company-transition-time cubic-bezier(0.165, 0.840, 0.440, 1.000) all;
+    .card {
+      padding: 0 48px 48px;
+      margin-bottom: 24px;
+      transform-style: preserve-3d;
+      position: relative;
+      transition-property: all;
+      cursor: pointer;
+      &:after {
+        content: '';
+        display: block;
         position: absolute;
         top: 0;
+        right: 0;
+        bottom: 0;
         left: 0;
-        &.bg {
-          position: relative;
+        box-shadow: inset rgba($primary, 0) 0 0 0 1px;
+        transition: 1s linear all;
+        border-radius: $border-radius;
+        z-index: 2;
+        transform: translateZ(1px);
+      }
+      h3, p {
+        transition: $company-transition-time cubic-bezier(0.165, 0.840, 0.440, 1.000) all;
+      }
+      h3 {
+        font-size: 17px;
+        color: $primary;
+        font-weight: 500;
+      }
+      p {
+        font-size: 13px;
+        line-height: 23px;
+        color: #8B9193;
+        margin-bottom: 0;
+      }
+      .illustration {
+        margin: 0 auto 48px;
+        position: relative;
+
+        .illustration-piece   {
+          width: 100%;
+          max-width: 408px;
+          transition: $company-transition-time cubic-bezier(0.165, 0.840, 0.440, 1.000) all;
+          position: absolute;
+          top: 0;
+          left: 0;
+          &.bg {
+            position: relative;
+          }
         }
       }
     }
     &:hover {
-      box-shadow: rgba($light-bg-color, 1) 0 30px 60px;
-      &:after {
-        box-shadow: inset rgba($primary, .3) 0 0 0 1px;
-      }
-      h3, p {
-        transform: translateZ(40px);
-      }
-      .illustration {
-        .fg { transform: translateZ(40px); }       
-        .mg { transform: translateZ(20px); }       
-        .bg { transform: translateZ(0); }       
+      .card {
+        box-shadow: rgba($light-bg-color, 1) 0 30px 60px;
+        &:after {
+          box-shadow: inset rgba($primary, .3) 0 0 0 1px;
+        }
+        h3, p {
+          transform: translateZ(40px);
+        }
+        .illustration {
+          .fg { transform: translateZ(40px); }       
+          .mg { transform: translateZ(20px); }       
+          .bg { transform: translateZ(0); }       
+        }
       }
     }
   }

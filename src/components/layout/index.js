@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import logo from '../../images/logo.svg'
+import * as Scroll from 'react-scroll';
+import logo from '../../images/logo.svg';
 
 // code syntax-highlighting theme
 // feel free to change it to another one
@@ -23,13 +24,13 @@ const TemplateWrapper = ({ children, data }) => {
             <Link to='/' className='navbar-brand'><img src={logo} alt="Stoble - Better Together" /></Link>
             <ul className='nav navbar-nav'>
               <li className='nav-item nav-item-company'>
-                <Link to='#' className='nav-link'>Stoble Coffee</Link>
+                <a href='https://stoblecoffee.com' className='nav-link'>Stoble Coffee</a>
               </li>
               <li className='nav-item nav-item-company'>
-                <Link to='#' className='nav-link'>Stoble Workplace</Link>
+                <a href='https://stobleworkplace.com' className='nav-link'>Stoble Workplace</a>
               </li>
               <li className='nav-item'>
-                <a href='#contact' className='btn btn-outline-secondary'>Contact Us</a>
+                <Scroll.Link to='contact' smooth={true} duration={1000} className='btn btn-outline-secondary'>Contact Us</Scroll.Link>
               </li>
             </ul>
           </Container>

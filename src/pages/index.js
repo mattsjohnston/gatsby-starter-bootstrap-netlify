@@ -95,25 +95,29 @@ const IndexPage = ({ data }) => {
 
           <ul className="companies row">
             <li className="col-sm">
-              <Tilt className="Tilt company company-coffee card" options={{ scale: 1.01, max: 15, speed: 3000, transition: true, reverse: false, glare: true }}>
-                <div className="illustration">
-                  <img className="illustration-piece bg" src={coffee_bg} alt="Stoble Coffee" />
-                  <img className="illustration-piece mg" src={coffee_mg} alt="Stoble Coffee" />
-                  <img className="illustration-piece fg" src={coffee_fg} alt="Stoble Coffee" />
-                </div>                <h3>{post.frontmatter.companies.stoble_coffee.name}</h3>
-                <p>{post.frontmatter.companies.stoble_coffee.summary}</p>
-              </Tilt>
+              <a className="company company-coffee" href="https://stoblecoffee.com">
+                <Tilt className="Tilt card" options={{ scale: 1.01, max: 15, speed: 3000, transition: true, reverse: false, glare: true }}>
+                  <div className="illustration">
+                    <img className="illustration-piece bg" src={coffee_bg} alt="Stoble Coffee" />
+                    <img className="illustration-piece mg" src={coffee_mg} alt="Stoble Coffee" />
+                    <img className="illustration-piece fg" src={coffee_fg} alt="Stoble Coffee" />
+                  </div>                <h3>{post.frontmatter.companies.stoble_coffee.name}</h3>
+                  <p>{post.frontmatter.companies.stoble_coffee.summary}</p>
+                </Tilt>
+              </a>
             </li>
             <li className="col-sm">
-              <Tilt className="Tilt company company-workplace card" options={{ scale: 1.01, max: 15, speed: 3000, transition: true, reverse: false, glare: true }}>
-                <div className="illustration">
-                  <img className="illustration-piece bg" src={workplace_bg} alt="Stoble Workplace" />
-                  <img className="illustration-piece mg" src={workplace_mg} alt="Stoble Workplace" />
-                  <img className="illustration-piece fg" src={workplace_fg} alt="Stoble Workplace" />
-                </div>
-                <h3>{post.frontmatter.companies.stoble_workplace.name}</h3>
-                <p>{post.frontmatter.companies.stoble_workplace.summary}</p>
-              </Tilt>
+              <a className="company company-workplace" href="https://stoblecoffee.com">
+                <Tilt className="Tilt card" options={{ scale: 1.01, max: 15, speed: 3000, transition: true, reverse: false, glare: true }}>
+                  <div className="illustration">
+                    <img className="illustration-piece bg" src={workplace_bg} alt="Stoble Workplace" />
+                    <img className="illustration-piece mg" src={workplace_mg} alt="Stoble Workplace" />
+                    <img className="illustration-piece fg" src={workplace_fg} alt="Stoble Workplace" />
+                  </div>
+                  <h3>{post.frontmatter.companies.stoble_workplace.name}</h3>
+                  <p>{post.frontmatter.companies.stoble_workplace.summary}</p>
+                </Tilt>
+              </a>
             </li>
           </ul>
 
