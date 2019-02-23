@@ -21,12 +21,12 @@ building:
   photo: /files/chico_1-photo.jpg
 our_story:
   content: >-
-    It all started at Cal Poly in San Luis Obispo. The gals met in the dorms and
-    were roommates throughout college. The guys ended up as roommates a few
-    years later. We experienced growth, change, and heart-ache alongside of one
-    another throughout those years forming deep, authentic, and lasting
-    friendships. Community with one another became our heartbeat. We all got
-    married the summer of 2010 and then embarked upon adulthood in separate
+    It all started at Cal Poly in San Luis Obispo, where Nat and Lauren met in
+    the dorms and were roommates throughout college. Matt and Matt ended up as
+    roommates a few years later. We experienced growth, change, and heart-ache
+    alongside of one another throughout those years forming deep, authentic, and
+    lasting friendships. Community with one another became our heartbeat. We all
+    got married the summer of 2010 and then embarked upon adulthood in separate
     parts of the world. 
 
 
