@@ -349,8 +349,53 @@ footer {
     margin-bottom: rem-calc(13px);
   }
 
-  form {
+  .form-container {
     margin: rem-calc(48px) 0;
+    perspective: 1000px;
+
+    .message {
+      margin-bottom: 1rem;
+    }
+
+    .form-container-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .form-success, .input-group {
+      backface-visibility: hidden;
+
+      .btn, .form-control {
+        z-index: 0;
+        box-shadow: none;
+      }
+    }
+
+    .form-success {
+      position: absolute;
+      z-index: 3;
+      background: #053C4E;
+      border-radius: 4px;
+      top: -1px; right: -1px; bottom: -1px; left: -1px;
+      transform: rotateX(180deg);
+      border: 1px solid rgba(#fff, .1);
+
+      span {
+        color: #fff;
+        font-size: rem-calc(21px);
+        line-height: rem-calc(48px);
+      }
+    }
+
+    &.form-container-success {
+      .form-container-inner {
+        transform: rotateX(180deg);
+      }
+    }
   }
 
   .contact {

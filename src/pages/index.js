@@ -7,6 +7,7 @@ import remark from 'remark';
 import remarkHtml from 'remark-html';
 import Tilt from 'react-tilt';
 import Img from "gatsby-image";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 import Layout from '../components/layout'
 
 import logo_s from          '../images/logo_s.svg'
@@ -20,6 +21,59 @@ import coffee_bg from       '../images/coffee/bg.svg'
 // import hero_shapes_2 from   '../images/hero/shapes 2.svg'
 // import hero_shapes_3 from   '../images/hero/shapes 3.svg'
 
+const NewsletterForm = ({ status, message, onValidated }) => {
+  let email, button;
+  const submit = () =>
+    // email &&
+    // email.value.indexOf("@") > -1 &&
+    onValidated({
+      EMAIL: email.value,
+    });
+  
+  return (
+    <div>
+      <div className={"form-container" + (status === 'success' ? ' form-container-success' : '')}>
+        {status === "sending" && <div className="message" style={{ color: "white" }}>sending...</div>}
+        {status === "error" && (
+          <div
+            className="message"
+            style={{ color: "red" }}
+            dangerouslySetInnerHTML={{ __html: message }}
+          />
+        )}
+        <div className="form-container-inner">
+
+          <div className="form-success">
+            <span className="message" dangerouslySetInnerHTML={{ __html: message }}></span>
+          </div>
+
+          <form onSubmit={submit} action="javascript:void(0);">
+            <div className="input-group input-group-lg">
+              <input
+                type="email"
+                className="form-control"
+                name="email"
+                ref={node => (email = node)}
+                placeholder="Enter your email address" />
+              <div className="input-group-append">
+                <button
+                  type="button"
+                  className="btn btn-wide btn-secondary"
+                  onClick={submit}
+                  ref={node => (button = node)}
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const IndexPage = ({ data }) => {
   const { markdownRemark: post } = data,
     hero = remark()
@@ -30,8 +84,6 @@ const IndexPage = ({ data }) => {
       .use(remarkHtml)
       .processSync(post.frontmatter.our_story.content)
       .toString();
-
-  console.log(post.frontmatter.building.photo);
     
   return (
     <Layout>
@@ -86,7 +138,7 @@ const IndexPage = ({ data }) => {
             <div className="gallery">
               {post.frontmatter.our_story.photos.map(function(photo, index) {
                 return (
-                  <figure className="gallery__item gallery__item">
+                  <figure className="gallery__item gallery__item" key={index}>
                     <Img fluid={photo.childImageSharp.fluid} className="gallery__img" alt="Thiedes and Johnstons" />
                   </figure>
                 );
@@ -110,15 +162,16 @@ const IndexPage = ({ data }) => {
 
               <div className="row justify-content-center">
                 <div className="col-12 col-md-8 col-lg-6">
-                  <form>
-                    <label className="sr-only" for="subscribeSrEmail">Enter your email address</label>
-                    <div className="input-group input-group-lg">
-                      <input type="email" className="form-control" name="email" id="subscribeSrEmail" placeholder="Enter your email address" aria-label="Enter your email address" aria-describedby="subscribeButton" required="" data-msg="Please enter a valid email address." />
-                      <div className="input-group-append">
-                        <button type="button" className="btn btn-wide btn-secondary" id="subscribeButton">Subscribe</button>
-                      </div>
-                    </div>
-                  </form>
+                  <MailchimpSubscribe
+                    url="//stobleco.us20.list-manage.com/subscribe/post?u=202892b1c52ef2f1fb1015967&id=fa57137320"
+                    render={({ subscribe, status, message }) => (
+                      <NewsletterForm
+                        status={status}
+                        message={message}
+                        onValidated={formData => subscribe(formData)}
+                      />
+                    )}
+                  />
 
                   <div className="contact">
                     <a href="#" className="icon-links">
