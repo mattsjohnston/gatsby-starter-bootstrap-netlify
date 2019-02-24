@@ -383,6 +383,7 @@ footer {
       padding: $input-padding-y-lg $input-padding-x-lg;
       @include font-size($input-font-size-lg);
       line-height: $input-line-height-lg;
+      height: auto;
     }
 
     .form-success, .input-group {
