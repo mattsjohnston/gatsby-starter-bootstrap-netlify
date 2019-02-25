@@ -1,9 +1,9 @@
 ---
 title: Stoble | Better Together
 path: /
-hero: |-
-  #### Built for Community
-  # Finding new opportunities for meaningful community.
+hero:
+  subheading: Built for Community
+  heading: Finding new opportunities for meaningful community.
 companies:
   stoble_coffee:
     name: Stoble Coffee Roasters

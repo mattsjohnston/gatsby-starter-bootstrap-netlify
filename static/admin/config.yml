@@ -17,7 +17,12 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Path", name: "path", widget: "hidden", default: "/" }
-          - { label: Hero, name: hero, widget: markdown }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Subheading, name: subheading, widget: string }
+              - { label: Heading, name: heading, widget: string }
           - label: Companies
             name: companies
             widget: object
