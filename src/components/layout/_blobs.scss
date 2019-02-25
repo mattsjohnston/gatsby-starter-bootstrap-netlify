@@ -1,0 +1,239 @@
+.blobs-container {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  overflow: hidden;
+  z-index: 0;
+  
+  .blobs {
+    filter: url('#goo'); 
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+  
+    .blob{
+      position: absolute;
+      border-radius: 50%;
+      fill: white;
+      opacity: 1;
+    }
+    
+    &.blobs-blue  {
+      // mix-blend-mode: multiply;
+      
+      .blob {
+        background-color: #004861;
+        
+        &:nth-child(1) {
+          right: 4%;
+          bottom: 14%;
+          width: 150px;
+          height: 150px;
+          animation: blue-1 50s ease-in-out infinite alternate;
+        }
+        &:nth-child(2) {
+          right: -3%;
+          bottom: -10%;
+          width: 150px;
+          height: 150px;
+          animation: blue-2 40s 5s ease-in-out infinite alternate;
+        }
+        &:nth-child(3) {
+          right: -30%;
+          top: 10%;
+          width: 250px;
+          height: 250px;
+          animation: blue-3 60s ease-in-out infinite alternate;
+        }
+      }
+    }
+    
+    &.blobs-orange  {
+      filter: none; 
+      mix-blend-mode: multiply;
+      
+      .blob {
+        background: #D46336;
+        width: 90px;
+        height: 90px;
+        right: 3%;
+        bottom: 33%;
+        animation: orange-1 45s ease-in-out infinite alternate;
+      }
+    }
+    
+    &.blobs-subtle  {
+      filter: url('#goo-lg'); 
+      mix-blend-mode: multiply;
+      
+      .blob {
+        background-color: #EBF0F1;
+        
+        &:nth-child(1) {
+          right: - (607px - 120px);
+          top: 0;
+          width: 607px;
+          height: 607px;
+          animation: subtle-1 60s ease-in-out infinite alternate;
+        }
+        &:nth-child(2) {
+          right: -100px;
+          bottom: -500px;
+          width: 607px;
+          height: 607px;
+          animation: subtle-2 60s ease-in-out infinite alternate;
+        }
+        &:nth-child(3) {
+          left: 170px;
+          top: -60px;
+          width: 352px;
+          height: 352px;
+          animation: subtle-3 80s ease-in-out infinite alternate;
+        }
+        &:nth-child(4) {
+          left: -150px;
+          top: -280px;
+          width: 352px;
+          height: 352px;
+          animation: subtle-4 80s ease-in-out infinite alternate;
+        }
+      }
+    }
+    
+    &.blobs-yellow  {
+      filter: url('#goo-md'); 
+      
+      .blob {
+        background-color: #F0C466;
+        
+        $circle-size: 260px;
+        &:nth-child(1) {
+          left: -10%;
+          bottom: 34%;
+          width: $circle-size;
+          height: $circle-size;
+          animation: yellow-1 40s ease-in-out infinite alternate;
+        }
+        &:nth-child(2) {
+          left: -1%;
+          bottom: -12%;
+          width: $circle-size;
+          height: $circle-size;
+          animation: yellow-2 60s 3s ease-in-out infinite alternate;
+        }
+      }
+    }
+    
+    &.blobs-white  {
+      filter: none; 
+      opacity: .4;
+      
+      .blob {
+        background: #fff;
+        width: 120px;
+        height: 120px;
+        left: 14%;
+        bottom: 15%;
+        animation: white-1 20s ease-in-out infinite alternate;
+      }
+    }
+    
+  }
+}
+
+@keyframes orange-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-400px, -200px);
+  }
+}
+
+@keyframes white-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-40px, -200px);
+  }
+}
+
+@keyframes yellow-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(500px, 40px);
+  }
+}
+@keyframes yellow-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, -300px);
+  }
+}
+
+@keyframes blue-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-40px, -400px);
+  }
+}
+@keyframes blue-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, -300px);
+  }
+}
+@keyframes blue-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-400px, 200px);
+  }
+}
+
+@keyframes subtle-1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-500px, -400px);
+  }
+}
+@keyframes subtle-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-500px, -200px);
+  }
+}
+@keyframes subtle-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(500px, 400px);
+  }
+}
+@keyframes subtle-4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(300px, 200px);
+  }
+}

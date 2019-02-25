@@ -9,6 +9,7 @@ import Tilt from 'react-tilt';
 import Img from "gatsby-image";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import Layout from '../components/layout'
+import Blobs from '../components/blobs'
 
 import logo_s from          '../images/logo_s.svg'
 import workplace_fg from    '../images/workplace/fg.svg'
@@ -93,6 +94,7 @@ const IndexPage = ({ data }) => {
           <div className="hero card">
             <h4>{post.frontmatter.hero.subheading}</h4>
             <h1>{post.frontmatter.hero.heading}</h1>
+            <Blobs />
           </div>
 
           <ul className="companies row">

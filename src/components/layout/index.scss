@@ -43,6 +43,8 @@
 
 @import "functions";
 
+@import "blobs";
+
 body, html {
   font-size: 12px;
   @include media-breakpoint-up(md) {
@@ -86,19 +88,25 @@ h2 {
   text-align: center;
   padding: 25vh 24px;
   background-color: $light-bg-color;
-  background-image: url("../../images/hero/shapes 1.svg"), url("../../images/hero/shapes 2.svg"), url("../../images/hero/shapes 3.svg");
+  // background-image: url("../../images/hero/shapes 1.svg"), url("../../images/hero/shapes 2.svg"), url("../../images/hero/shapes 3.svg");
   background-position: right bottom, left bottom, left top;
   background-repeat: no-repeat;
   background-size: 45%, 30%, 90%;
 
   > h4 {
     color: $light-green-text;
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: multiply;
   }
   > h1 {
     font-size: rem-calc(26px);
     font-weight: 500;
     color: $primary;
     line-height: 1.8em;
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: multiply;
   }
   @include media-breakpoint-up(sm) {
     padding-left: 30%;
