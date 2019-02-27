@@ -23,6 +23,7 @@ const TemplateWrapper = ({ children, data }) => {
         <Helmet>
           <title>{data.site.siteMetadata.title}</title>
           <link rel="icon" type="image/png" href={favicon} />
+          <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
         </Helmet>
         <div className='navbar navbar-expand-md navbar-light'>
           <Container>
