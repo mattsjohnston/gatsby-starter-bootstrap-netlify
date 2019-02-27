@@ -5,6 +5,8 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import * as Scroll from 'react-scroll';
+
+import favicon from '../../images/favicon/favicon.ico';
 import logo from '../../images/logo.svg';
 
 // code syntax-highlighting theme
@@ -18,7 +20,10 @@ const TemplateWrapper = ({ children, data }) => {
   return (
     <StaticQuery query={pageQuery} render={data => (
       <div className='App'>
-        <Helmet title={data.site.siteMetadata.title} />
+        <Helmet>
+          <title>{data.site.siteMetadata.title}</title>
+          <link rel="icon" type="image/png" href={favicon} />
+        </Helmet>
         <div className='navbar navbar-expand-md navbar-light'>
           <Container>
             <Link to='/' className='navbar-brand'><img src={logo} alt="Stoble - Better Together" /></Link>
