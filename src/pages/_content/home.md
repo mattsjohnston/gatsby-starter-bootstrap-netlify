@@ -2,8 +2,8 @@
 title: Stoble | Better Together
 path: /
 hero:
-  subheading: Built for Community
   heading: Finding new opportunities for meaningful community.
+  subheading: Built for Community
 companies:
   stoble_coffee:
     name: Stoble Coffee Roasters
@@ -38,7 +38,7 @@ our_story:
     Eight years and four children later, we live across the street from each
     other and are working to build a company that builds the type of community
     we love so much.
-  heading: From friends to to neighbors to business partners.
+  heading: From friends to neighbors to business partners.
   photos:
     - /files/img_20161231_102800.jpg
     - /files/img_4100.jpg
