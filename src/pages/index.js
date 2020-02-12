@@ -111,7 +111,7 @@ const IndexPage = ({ data }) => {
               </a>
             </li>
             <li className="col-sm">
-              <a className="company company-workplace" href="https://stoblecoffee.com">
+              <a className="company company-workplace" href="https://www.stobleworkplace.com/">
                 <Tilt className="Tilt card" options={{ scale: 1.01, max: 15, speed: 3000, transition: true, reverse: false, glare: true }}>
                   <div className="illustration">
                     <img className="illustration-piece bg" src={workplace_bg} alt="Stoble Workplace" />
