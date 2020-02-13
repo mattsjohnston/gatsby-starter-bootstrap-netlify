@@ -380,6 +380,7 @@ footer {
       text-align: center;
       transition: transform 0.8s;
       transform-style: preserve-3d;
+      backface-visibility: hidden;
     }
 
     .input-group-lg > .form-control,
