@@ -16,7 +16,7 @@ companies:
       More than an office, we’re building a community for you to belong while
       you pursue your passions.
 building:
-  coming: Coming Early 2020
+  coming: Coming Spring/Summer 2020
   location: 'Downtown Chico, California'
   photo: /files/chico_1-photo.jpg
 our_story:
