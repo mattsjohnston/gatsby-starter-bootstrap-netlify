@@ -33,7 +33,7 @@
     "react-tilt": "^0.1.4",
     "reactstrap": "^6.4.0",
     "remark": "^10.0.1",
-    "remark-html": "^9.0.0",
+    "remark-html": "^13.0.2",
     "tilt.js": "^1.2.1"
   },
   "keywords": [
